@@ -1,0 +1,150 @@
+/* 
+ css/styles.css 
+ Student Name: yazan shawa
+ Student Id: 12428589
+*/
+:root{
+  --bg:#f6f1e9;
+  --card:#ffffff;
+  --ink:#2a2a2a;
+  --muted:#6d6d6d;
+  --brand:#0a8c7d;
+  --radius:16px;
+  --shadow:0 4px 12px rgba(0,0,0,.08);
+  --container:950px;         
+  --gap:22px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Rubik",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+
+
+.container,
+.navbar,
+.about-container,
+.menu-grid,
+.hours-container,
+.findus-container{max-width:var(--container);margin:0 auto;padding:0 25px}
+
+/* Header */
+.site-header{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.06);padding:14px 0}
+.navbar{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;font-size:22px;color:var(--brand)}
+.nav-menu{display:flex;list-style:none;gap:30px}
+.nav-menu a{text-decoration:none;color:#333;font-weight:500}
+.nav-menu a:hover{color:var(--brand)}
+
+/* Hero */
+.hero{
+  height:340px;
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('../images/bg.jpg') center/cover no-repeat;
+  display:flex;align-items:center;justify-content:center;text-align:center;color:#fff
+}
+.hero-text{max-width:700px;padding:0 20px}
+.badge-tag{display:inline-block;background:rgba(255,255,255,.22);padding:6px 14px;border-radius:999px;font-size:13px;margin-bottom:12px}
+.hero h1{font-size:42px;margin:6px 0 8px;font-weight:700}
+.hero p{color:#f0f0f0;margin-bottom:14px}
+.menu-btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;padding:10px 22px;border-radius:999px;box-shadow:0 10px 24px rgba(10,140,125,.28)}
+
+/* Card base */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  border:1px solid #ece8e1;
+  padding:28px 30px;
+}
+
+/* About */
+#about{padding:70px 0}
+.about-container{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.feature-tags{display:flex;gap:10px;margin-top:16px}
+.feature-tags span{padding:7px 12px;border-radius:8px;background:#f3efe8;border:1px solid #e7dfd5;font-size:13px}
+.muted{color:var(--muted)}
+
+/* Menu */
+#menu{padding:44px 0}
+.section-title{text-align:left;max-width:var(--container);margin:0 auto 18px;padding:0 25px;font-size:24px;font-weight:700}
+.menu-grid{display:grid;grid-template-columns:repeat(3,270px);justify-content:center;gap:var(--gap)}
+.menu-column h3{font-size:18px;margin-bottom:10px}
+.dish{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:10px;margin-bottom:14px;border-bottom:1px solid #e8e1d8}
+.dish h4{font-size:15px;font-weight:700;margin-bottom:2px}
+.dish p{font-size:13px;color:var(--muted);margin-top:-3px}
+.dish span{font-size:16px;font-weight:700;color:var(--brand)}
+.note{max-width:var(--container);margin:8px auto 0;padding:0 25px;font-size:12.5px;color:#8a8a8a}
+
+/* Hours & Reserve */
+#hours{padding:44px 0}
+.hours-container{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.time-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed #e6e0d7}
+.time-row:last-child{border-bottom:0}
+
+/* Find Us */
+#find-us{padding:20px 0 70px}
+.findus-container{display:grid;grid-template-columns:360px 360px;justify-content:center;gap:var(--gap)}
+.map-card{padding:0;overflow:hidden;height:280px;display:flex;align-items:center;justify-content:center}
+.map-card img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
+
+/* Footer */
+.site-footer{background:#333;color:#fff;text-align:center;padding:22px;font-size:14px}
+
+
+@media (max-width: 768px){
+  :root{ --container: 100%; --gap:18px }
+  .navbar{padding:0 18px}
+  .nav-menu{gap:16px;font-size:14px}
+  .hero{height:300px}
+  .hero h1{font-size:30px}
+  .about-container,
+  .hours-container{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr;padding:0 25px}
+  .findus-container{grid-template-columns:1fr}
+  .map-card{height:220px}
+}
+
+
+@media (max-width: 768px) {
+  .findus-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* footer */
+.site-footer {
+    background-color: #333;
+    color: rgb(28, 212, 18);
+    text-align: center;
+    padding: 30px;
+}
+
+.site-footer a {
+    color: var(--brand-2);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .about-container, .menu-grid, .hours-container, .findus-container {
+        flex-direction: column;
+    }
+
+    .map-box img {
+        height: 250px;
+    }
+}
