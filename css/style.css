@@ -26,7 +26,7 @@ body{font-family:"Rubik",sans-serif;background:var(--bg);color:var(--ink);line-h
 .hours-container,
 .findus-container{max-width:var(--container);margin:0 auto;padding:0 25px}
 
-/* Header */
+
 .site-header{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.06);padding:14px 0}
 .navbar{display:flex;align-items:center;justify-content:space-between}
 .logo{font-weight:700;font-size:22px;color:var(--brand)}
@@ -34,7 +34,7 @@ body{font-family:"Rubik",sans-serif;background:var(--bg);color:var(--ink);line-h
 .nav-menu a{text-decoration:none;color:#333;font-weight:500}
 .nav-menu a:hover{color:var(--brand)}
 
-/* Hero */
+
 .hero{
   height:520px;
   background:
@@ -43,12 +43,12 @@ body{font-family:"Rubik",sans-serif;background:var(--bg);color:var(--ink);line-h
   display:flex;align-items:center;justify-content:center;text-align:center;color:#fff
 }
 .hero-text{max-width:700px;padding:0 20px}
-.badge-tag{display:inline-block;background:rgba(255,255,255,.22);padding:6px 14px;border-radius:999px;font-size:13px;margin-bottom:12px}
+.badge-tag{display:inline-block;background:rgba(255,255,255,.22);padding:6px 14px;border-radius:999px;font-size:13px;margin-bottom:12px;background-color:#0a8c7d}
 .hero h1{font-size:42px;margin:6px 0 8px;font-weight:700}
 .hero p{color:#f0f0f0;margin-bottom:14px}
 .menu-btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;padding:10px 22px;border-radius:999px;box-shadow:0 10px 24px rgba(10,140,125,.28)}
 
-/* Card base */
+
 .card{
   background:var(--card);
   border-radius:var(--radius);
@@ -57,14 +57,20 @@ body{font-family:"Rubik",sans-serif;background:var(--bg);color:var(--ink);line-h
   padding:28px 30px;
 }
 
-/* About */
+
 #about{padding:70px 0}
 .about-container{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
 .feature-tags{display:flex;gap:10px;margin-top:16px}
-.feature-tags span{padding:7px 12px;border-radius:8px;background:#f3efe8;border:1px solid #e7dfd5;font-size:13px}
+.feature-tags span{background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;}
 .muted{color:var(--muted)}
 
-/* Menu */
 #menu{padding:44px 0}
 .section-title{text-align:left;max-width:var(--container);margin:0 auto 18px;padding:0 25px;font-size:24px;font-weight:700}
 .menu-grid{display:grid;grid-template-columns:repeat(3,270px);justify-content:center;gap:var(--gap)}
@@ -75,19 +81,19 @@ body{font-family:"Rubik",sans-serif;background:var(--bg);color:var(--ink);line-h
 .dish span{font-size:16px;font-weight:700;color:var(--brand)}
 .note{max-width:var(--container);margin:8px auto 0;padding:0 25px;font-size:12.5px;color:#8a8a8a}
 
-/* Hours & Reserve */
+
 #hours{padding:44px 0}
 .hours-container{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
 .time-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed #e6e0d7}
 .time-row:last-child{border-bottom:0}
 
-/* Find Us */
+
 #find-us{padding:20px 0 70px}
 .findus-container{display:grid;grid-template-columns:360px 360px;justify-content:center;gap:var(--gap)}
 .map-card{padding:0;overflow:hidden;height:280px;display:flex;align-items:center;justify-content:center}
 .map-card img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
 
-/* Footer */
+
 .site-footer{background:#333;color:#fff;text-align:center;padding:22px;font-size:14px}
 
 
@@ -110,7 +116,7 @@ body{font-family:"Rubik",sans-serif;background:var(--bg);color:var(--ink);line-h
     grid-template-columns: 1fr;
   }
 }
-/* footer */
+
 .site-footer {
     background-color: #333;
     color: rgb(28, 212, 18);
@@ -127,7 +133,7 @@ body{font-family:"Rubik",sans-serif;background:var(--bg);color:var(--ink);line-h
     text-decoration: underline;
 }
 
-/* responsive design */
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -149,3 +155,84 @@ body{font-family:"Rubik",sans-serif;background:var(--bg);color:var(--ink);line-h
     }
 }
 
+
+#about {
+  padding: 60px 0;
+  background-color: var(--bg);
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.about-box,
+.chef-box {
+  background-color: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 28px;
+  border: 1px solid #e7e2d9;
+  flex: 1 1 400px;
+}
+
+.about-box h2,
+.chef-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.about-box p,
+.chef-box p {
+  color: var(--ink);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.feature-tags span {
+  display: inline-block;
+  background: #fafafa;
+  border: 1px solid #dcdcdc;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.feature-tags span:hover {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-box,
+  .chef-box {
+    width: 100%;
+  }
+}
